@@ -1,0 +1,24 @@
+{# empty Twig template  #}
+{% extends "CoreBundle::layout.html.twig" %}
+
+{% block title %}
+  {{ parent() }} - Page d'Accueil
+{% endblock %}
+
+{% block body %}
+
+  <h1>Portail de Youssouf</h1>
+
+  {# On affiche tous les messages flash dont le nom est « info » #}
+  {% for message in app.session.flashbag.get('info') %}
+    <div class="alert alert-info">Message flash : {{ message }}</div>
+  {% endfor %}
+  <p>
+    {# Ici, on devrait utiliser un contrôleur d'un éventuel ForumBundle pour afficher les derniers posts sur le forum,
+       ce n'est pas le sujet ici #}
+    Bienvenue sur le futur portail de youssouf...
+  </p>
+  
+  <a href="{{path('yb_eleveur_homepage')}}">Site eleveur</a>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{# empty Twig template  #}
+{% extends "CoreBundle::layout.html.twig" %}
+
+{% block title %}
+  Eleveur
+{% endblock %}
+
+{% block body %}
+
+  {# On définit un sous-titre commun à toutes les pages du bundle, par exemple #}
+  <h1>Eleveur</h1>
+  
+  <a href='{{ path('core_homepage') }}'>Retour au portail de youssouf</a>
+
+  <hr>
+
+  {# On définit un nouveau bloc, que les vues du bundle pourront remplir #}
+  {% block eleveur_body %}
+  {% endblock %}
+
+{% endblock %}

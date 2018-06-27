@@ -1,0 +1,3 @@
+yb_eleveur_homepage:
+    path:     /
+    defaults: { _controller: YBEleveurBundle:Eleveur:index }

@@ -1,3 +1,6 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+core:
+    resource: "@CoreBundle/Resources/config/routing.yml"
+    
+yb_eleveur:
+    resource: "@YBEleveurBundle/Resources/config/routing.yml"
+    prefix:   /eleveur
